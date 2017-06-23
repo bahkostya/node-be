@@ -1,0 +1,28 @@
+image: webbylab/node:6-npm5
+
+services:
+  - mongo:latest
+
+variables:
+  TEST_MONGO_HOST: mongo
+
+lint:
+  stage: test
+  script:
+    - npm install
+    - cp etc/config.json.sample etc/config.json
+    - npm run lint
+
+test-mocha:
+  stage: test
+  script:
+    - npm install
+    - cp etc/config.json.sample etc/config.json
+    - npm run test-mocha
+
+test-coverage:
+  stage: test
+  script:
+    - npm install
+    - cp etc/config.json.sample etc/config.json
+    - npm run test-coverage

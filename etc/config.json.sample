@@ -1,0 +1,31 @@
+{
+    "mainUrl": "",
+    "secret":  "CHANGE_ME",
+    "appPort":  8080,
+
+    "staticPath": "/enter/path/to/static",
+    "testStaticPath": "./test_static",
+    "staticUrl": "/static",
+    "postImagesMaxSize": 4000000,
+
+    "db":{
+        "name": "modern-node-be",
+        "testName": "modern-node-be-test",
+        "host": "localhost",
+        "port": 27017,
+        "user": "",
+        "password":""
+    },
+
+    "mail": {
+        "from": "noreply@modern-node-be.com",
+        "transport": "SMTP",
+        "transport_options": {
+            "service": "Gmail",
+            "auth": {
+                "user": "",
+                "pass": ""
+            }
+        }
+    }
+}
